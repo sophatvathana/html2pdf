@@ -1,0 +1,76 @@
+@media screen and (max-width: 1024px) {
+.deliver h4 {
+    font-weight: bold;
+    font-size: 26px;
+}
+/* page 02*/
+.col-sm-2.menu {
+    padding: 0;
+}
+a h4.menu {
+    text-decoration: underline;
+    color: rgb(0, 0, 238);
+    font-weight: bold;
+    font-size:15px;
+}
+.control-label {
+    font-size: 20px;
+    padding: 0;
+}
+.date-picker h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+.table.table-bordered.table-font {
+    font-size: 16px;
+}
+
+}
+@media screen and (max-width: 768px) {
+.wrapp-conten p {
+    letter-spacing: 0px;
+    padding-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #292b2c;
+    font-size: 17px;
+}
+h4.menu-h4 {
+    margin-top: 18px;
+    border-left: 3px solid #d06e62;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+.date-picker h4 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+.table.table-bordered.table-font {
+    font-size: 14px;
+}
+.deliver h4 {
+    font-weight: bold;
+    font-size: 17px;
+}
+/* page 02*/
+.col-sm-2.menu {
+    padding: 0;
+}
+a h4.menu {
+    text-decoration: underline;
+    color: rgb(0, 0, 238);
+    font-weight: bold;
+    font-size:16px;
+}
+.control-label {
+    font-size:17px;
+    padding: 0;
+}
+.col-sm-7.blog-button {
+    padding: 0;
+}
+}
