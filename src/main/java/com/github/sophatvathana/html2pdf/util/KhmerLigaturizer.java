@@ -411,6 +411,7 @@ public class KhmerLigaturizer implements LanguageProcessor{
 	
 	@Override
 	public String process(String s) {
+		System.out.println("works");
 		KhmerLigaturizer khmerRender = new KhmerLigaturizer();
 		return BidiLine.processLTR(khmerRender.render(s), PdfWriter.RUN_DIRECTION_LTR, 0);
 	}

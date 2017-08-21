@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!--<meta http-equiv="Content-Type" content="charset=UTF-8" />-->
+    <meta http-equiv="Content-Type" content="charset=UTF-8" />
     <title>2</title>
-    <link rel="stylesheet" th:href="@{/static/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/static/css/style.css}"/>
-    <link rel="stylesheet" th:href="@{/static/css/responsive.css}"/>
-
+    <link rel="stylesheet" th:href="@{${url} + '/static/css/bootstrap.css'}"/>
+    <link rel="stylesheet" th:href="@{${url} + '/static/css/style.css'}"/>
+    <style>
+        @font-face {
+        font-family: 'Khmer';
+        src: 'http://localhost:8080/static/fonts/kh_battambang.ttf';
+        }
+    </style>
 </head>
-<body style="font-family:Khmer!important;">
+<body style="font-family:'Khmer'!important;">
 <div class="container">
     <div class="wrapp-conten">
         <div class="row invioce">
             <div class="col-xs-12 col-sm-12 header-invoice">
                 <div class="header-logo">
-                    <img th:src="@{/static/images/logo-bvc-header.png}"/>
+                    <img th:src="@{${url} + '/static/images/logo-bvc-header.png'}"/>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12">
-                <div class="col-xs-4 col-sm-4 barcode"><img th:src="@{/static/images/barcode.png}"/></div>
-                <div class="col-xs-8 col-sm-8 invoice-title"><img th:src="@{/static/images/invoice-bvc.png}"/></div>
+                <div class="col-xs-4 col-sm-4 barcode"><img th:src="@{${url} + '/static/images/barcode.png'}"/></div>
+                <div class="col-xs-8 col-sm-8 invoice-title"><img th:src="@{${url} + '/static/images/invoice-bvc.png'}"/></div>
             </div>
         </div>
         <div class="row invioce">
@@ -31,7 +35,7 @@
                         <div style="font-family:Khmer" class="col-xs-6 col-sm-6"><p>ឈ្មោះ អតិថិជន :</p></div><div class="col-xs-6 col-sm-6"><p>ហេង ម៉េងហុង</p></div>
                         <div style="font-family:Khmer" class="col-xs-6 col-sm-6"><p>អាស័ដ្ធាន ទទួលវិក័យប័ត្រ:</p></div><div class="col-xs-6 col-sm-6 location"><p>ភូមិត្បូង ឃុំគរ ស្រុក ត្បូង ឃ្មុំ ខេតុ ត្បូង ឃ្មុំ</p></div>
                     </div>
-                    <img th:src="@{/static/images/customer-info-bvc.png}"/>
+                    <img th:src="@{${url} + '/static/images/customer-info-bvc.png'}"/>
                     <br/>
                 </div>
             </div>
@@ -44,7 +48,7 @@
             </div>
         </div>
         <div class="master-content">
-            <img th:src="@{/static/images/b-account.jpg}"/>
+            <img th:src="@{${url} + '/static/images/b-account.jpg'}"/>
             <div class="row invioce">
                 <div class="col-xs-12 col-sm-12">
                     <div class="col-xs-6 col-sm-6">

@@ -1,5 +1,5 @@
 
-/*@media print { body { -webkit-print-color-adjust: exact; } }*/
+@media print { body { -webkit-print-color-adjust: exact; } }
 .row.invioce {
     margin-right: 0;
     margin-left: 0;
@@ -286,7 +286,7 @@ h1.invoice {
     .cutomer-info {position: absolute;top: 36px;left: 30px;}
 }
 /* Style for printing  */
-/*@media print {*/
+@media print {
     .master-content {background-color: #bdecfe !important;border-top-right-radius: 14px;border-top-left-radius: 14px;margin-top: 6px;-webkit-print-color-adjust: exact; }
     .table th {background-color: #00753d !important;}
     .table th p {color: white !important;font-size: 17px;}
@@ -438,11 +438,11 @@ h1.invoice {
     .col-xs-12.col-sm-12.note1 {
         padding: 0 !important;
     }
-/*}*/
+}
 
-/*@media print {*/
-    /*@page {*/
-        /*size: a4;*/
-        /*margin-top: 0px;*/
-    /*}*/
-/*}*/
+@media print {
+    @page {
+        size: a4;
+        margin-top: 0px;
+    }
+}

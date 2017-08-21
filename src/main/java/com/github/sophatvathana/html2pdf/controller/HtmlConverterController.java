@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.github.sophatvathana.html2pdf.util.HttpRequest;
 import com.itextpdf.tool.xml.exceptions.CssResolverException;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -29,21 +30,22 @@ import com.github.sophatvathana.html2pdf.util.HtmlConverterUtil;
 public class HtmlConverterController{
 	
 	@RequestMapping(value="/index")
-	public ModelAndView index(HttpServletRequest httpServletRequest,HttpServletResponse response) throws IOException, DocumentException {
+	public ModelAndView index(HttpServletRequest httpServletRequest, HttpServletResponse response) throws IOException, DocumentException {
 		ModelAndView mav=new ModelAndView("index");
-		mav.addObject("url",getUrl(httpServletRequest) );
+		//mav.addObject("url",getUrl(httpServletRequest) );
+		mav.addObject("url", "file:///Users/sophatvathana/Desktop/sona/html2pdf/src/main/webapp");
 		mav.addObject("name", "sona");
+		mav.addObject("invoice_id", 001);
 		return mav;
 		
 	}
 	
 	@RequestMapping(value="/html")
-	public void pdf(HttpServletRequest httpServletRequest,HttpServletResponse response,String name) throws IOException, DocumentException, CssResolverException {
-    	String s = HttpRequest.sendPost(getUrl(httpServletRequest)+"/index.do", "");
-		System.out.println(s);
+	public void pdf(HttpServletRequest httpServletRequest,HttpServletResponse response,String name) throws IOException, DocumentException, CssResolverException, com.lowagie.text.DocumentException, InterruptedException {
+//		System.out.println(s);
     	String fileUrl=httpServletRequest.getSession().getServletContext().getRealPath("/")+"tmp/"+name+UUID.randomUUID();
     	System.out.println(fileUrl);
-		HtmlConverterUtil.Html2Pdf(s, fileUrl);
+		HtmlConverterUtil.Html2Pdf(httpServletRequest, fileUrl);
 		
 		//response.setContentType("multipart/form-data");
 		response.setContentType("application/pdf;charset=utf-8");
